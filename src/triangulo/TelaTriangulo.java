@@ -38,7 +38,6 @@ public class TelaTriangulo {
 		for (String valor : propriedades) {
 			System.out.println(valor);
 		}
-
 	}
 
 }
