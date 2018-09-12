@@ -7,16 +7,8 @@ public class Triangulo {
 
 	public Set<String> processaTriangulo(double a, double b, double c) {
 		Set<String> propriedades = new HashSet<String>();
-
-		double hipotenusa = a;
-
-		if (hipotenusa < b) {
-			hipotenusa = b;
-		}
-
-		if (hipotenusa < c) {
-			hipotenusa = c;
-		}
+		
+		double hipotenusa = defineHipotenusa(a, b, c);
 
 		if ((a + b + c - hipotenusa) > hipotenusa) {
 			propriedades.add("Válido");
@@ -40,5 +32,18 @@ public class Triangulo {
 		}
 		
 		return propriedades;
+	}
+	
+	public double defineHipotenusa(double a, double b, double c) {
+		double hipotenusa = a;
+		
+		if (hipotenusa < b) {
+			hipotenusa = b;
+		}
+
+		if (hipotenusa < c) {
+			hipotenusa = c;
+		}
+		return hipotenusa;
 	}
 }
